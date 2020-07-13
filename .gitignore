@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# MB:files I use to build the app
+dist/

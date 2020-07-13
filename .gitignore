@@ -105,3 +105,4 @@ dist
 
 # MB:files I use to build the app
 dist/
+*.code-workspace

@@ -1,0 +1,44 @@
+{
+	"name": "graphical-youtube-dl",
+	"productName": "Graphical Youtube-DL",
+	"version": "1.3.0",
+	"description": "A minimal Electron application",
+	"main": "app/main.js",
+	"scripts": {
+		"start": "electron . --inspect=5858",
+		"EB-package": "electron-builder --dir",
+		"EB-distribute": "electron-builder"
+	},
+	"author": "MB",
+	"license": "WTFPL-2.0",
+	"devDependencies": {
+		"electron": "^9.0.5",
+		"electron-builder": "^22.7.0",
+		"electron-packager": "^15.0.0",
+		"electron-winstaller": "^4.0.1",
+		"electron-wix-msi": "^2.2.0"
+	},
+	"dependencies": {},
+	"build": {
+		"appId": "com.lgdl.graphical-youtube-dl",
+		"productName": "Graphical youtube-DL",
+		"files": [
+			"**/app/**/*"
+		],
+		"mac": {
+			"category": "your.app.category.type"
+		},
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64",
+						"ia32"
+					]
+				}
+			],
+			"icon": "app/assets/icon256.ico"
+		}
+	}
+}

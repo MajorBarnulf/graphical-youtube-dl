@@ -1,0 +1,224 @@
+{
+	"window": {
+		"showDescription": false,
+		"verticalDragPosition": 38.96243291592127,
+		"horizontalDragUpPosition": 56.474068053015365,
+		"horizontalDragDownPosition": 40.92731829573937
+	},
+	"settings": {
+		"videoFormat": {
+			"extractAudio": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--extract-audio"
+			},
+			"audioFormat": {
+				"status": "best",
+				"states": [
+					"best",
+					"aac",
+					"flac",
+					"mp3",
+					"m4a",
+					"opus",
+					"vorbis",
+					"wav"
+				],
+				"dependencies": [
+					"extractAudio"
+				],
+				"option": "--audio-format"
+			},
+			"audioQuality": {
+				"status": "0",
+				"states": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"dependencies": [],
+				"option": "--audio-quality"
+			},
+			"videoFormat": {
+				"status": "mp4",
+				"states": [
+					"mp4",
+					"flv",
+					"ogg",
+					"webm",
+					"mkv",
+					"avi"
+				],
+				"dependencies": [],
+				"option": "--recode-video"
+			},
+			"embedSubs": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--embed-subs"
+			},
+			"embedThumbnail": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--embed-thumbnail"
+			},
+			"addMetadata": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--add-metadata"
+			},
+			"downloadQuality": {
+				"status": "best",
+				"states": [
+					"best",
+					"worst"
+				],
+				"dependencies": [],
+				"option": "--format"
+			},
+			"noPlaylist": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--no-playlist"
+			},
+			"includeAds": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--include-ads"
+			},
+			"limitRate": {
+				"status": "64M",
+				"states": [
+					"16K",
+					"64K",
+					"256K",
+					"1M",
+					"2M",
+					"4M",
+					"8M",
+					"16M",
+					"64M"
+				],
+				"dependencies": [],
+				"option": "--limit-rate"
+			},
+			"retryForever": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--limit-rate",
+				"option2": "infinite"
+			},
+			"outputPath": {
+				"status": "C:\\",
+				"states": [],
+				"dependencies": [],
+				"option": "--output"
+			},
+			"restrictFilenames": {
+				"status": true,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--restrict-filenames"
+			}
+		},
+		"downloading": {
+			"noPlaylist": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--no-playlist"
+			},
+			"includeAds": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--include-ads"
+			},
+			"limitRate": {
+				"status": "64M",
+				"states": [
+					"16K",
+					"64K",
+					"256K",
+					"1M",
+					"2M",
+					"4M",
+					"8M",
+					"16M",
+					"64M"
+				],
+				"dependencies": [],
+				"option": "--limit-rate"
+			},
+			"retryForever": {
+				"status": false,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--limit-rate",
+				"option2": "infinite"
+			},
+			"outputPath": {
+				"status": "D:\\user\\matth\\Téléchargements\\1",
+				"states": [],
+				"dependencies": [],
+				"option": "--output"
+			},
+			"restrictFilenames": {
+				"status": true,
+				"states": [
+					true,
+					false
+				],
+				"dependencies": [],
+				"option": "--restrict-filenames"
+			}
+		}
+	}
+}

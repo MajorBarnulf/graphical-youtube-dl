@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Graphical youtube-dl</title>
+	<link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+	<div class="window-ribbon">
+		<div class="window-resize1">
+			<img src="assets/icon64.png" height="60%" id="icon">
+		</div>
+		<div class="window-close" onclick="window.close()">x</div>
+		<div class="window-minimize" id="window-minimize" onclick="minimizePressed()">-</div>
+	</div>
+	<div class="window-content">
+		<div class="content" id="content" onmouseup="content.onMouseUp()" onmousemove="content.onMouseMove(event)">
+			<div class="content-up">
+				<div class="content-up-left">
+					<p>url list :</p>
+					<div class="url-list-container" id="url-list-container">
+					</div>
+				</div>
+				<div class="content-up-drag" id="horizontalDragUp" onmousedown="horizontalDragUp.mouseDown = true">
+					<div class="drag-handle-vertical"></div>
+				</div>
+				<div class="content-up-right">
+					<div class="title">Graphical Youtube-DL</div>
+					<div class="description" id="decription">to download a video, paste a link in the URL field, add it to the url list, chose the right settings and click download.</p> <p>This tool is a graphical interface for <a onclick="linkClicked('https://github.com/ytdl-org/youtube-dl')" href="#">youtube-dl</a>, a complete list of supported platforms is avaliable <a onclick="linkClicked('https://ytdl-org.github.io/youtube-dl/supportedsites.html')" href="#">there</a></div>
+						<div class="button-description" id="button-description" onclick="descriptionButton.onClick()">↑</div>
+						<div class="url-field">
+						<p>URL</p><input type="text" class="url-input" id="url-input" placeholder="https://">
+					</div>
+					<div class="url-button-container">
+						<div class="url-button" id="url-add-button" onclick="urlButtons.add.onClick()">add</div>
+						<div class="url-button" id="url-remove-button" onclick="urlButtons.remove.onClick()">remove</div>
+						<div class="url-button" id="url-clear-button">clear</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-drag" id="verticalDrag" onmousedown="verticalDrag.mouseDown = true">
+				<div class="drag-handle-horizontal"></div>
+			</div>
+			<div class="content-down">
+				<div class="content-down-left">
+					<p>settings :</p>
+					<div class="setting-cathegory-container">
+						<div class="setting-cathegory-title">Video format</div>
+						<div class="setting-cathegory-title">Downloading</div>
+						<div class="setting-cathegory">
+							<div class="setting">extract audio
+								<div class="setting-checkbox" id="extractAudio" onclick="extractAudioCheckbox.clicked()"></div></div>
+							<div class="setting">audio format
+								<div class="setting-dropdown" id="audioFormat">
+									<div class="setting-dropdown-value" id="setting-dropdown-value-audioFormat" onclick="audioFormatDropdown.fieldClicked()"></div>
+								</div>
+							</div>
+							<div class="setting">audio quality
+								<div class="setting-dropdown" id="audioQuality">
+									<div class="setting-dropdown-value" id="setting-dropdown-value-audioQuality" onclick="audioQualityDropdown.fieldClicked()"></div>
+								</div>
+							</div>
+							<div class="setting">video format
+								<div class="setting-dropdown" id="videoFormat">
+									<div class="setting-dropdown-value" id="setting-dropdown-value-videoFormat" onclick="videoFormatDropdown.fieldClicked()"></div>
+								</div>
+							</div>
+							<div class="setting">embed subtitles
+								<div class="setting-checkbox" id="embedSubs" onclick="embedSubsCheckbox.clicked()"></div></div>
+							<div class="setting">embed thumbnail
+								<div class="setting-checkbox" id="embedThumbnail" onclick="embedThumbnailCheckbox.clicked()"></div></div>
+							<div class="setting">add metadata
+								<div class="setting-checkbox" id="addMetadata" onclick="addMetadataCheckbox.clicked()"></div></div>
+						</div>
+
+						<div class="setting-cathegory">
+							<div class="setting">no playlist
+								<div class="setting-checkbox" id="noPlaylist" onclick="noPlaylistCheckbox.clicked()"></div></div>
+							<div class="setting">include adds
+								<div class="setting-checkbox" id="includeAds" onclick="includeAdsCheckbox.clicked()"></div></div>
+							<div class="setting">limit rate
+								<div class="setting-dropdown" id="limitRate">
+									<div class="setting-dropdown-value" id="setting-dropdown-value-limitRate" onclick="limitRateDropdown.fieldClicked()"></div>
+								</div>
+							</div>
+							<div class="setting">retry forever
+								<div class="setting-checkbox" id="retryForever" onclick="retryForeverCheckbox.clicked()"></div></div>
+							<div class="setting">output path
+								<div class="setting-input-container">
+									<input class="setting-input" id="outputPath" type="text" onchange="outputPathInput.changed()">
+								</div>
+							</div>
+							<div class="setting">restrict filename
+								<div class="setting-checkbox" id="restrictFilenames" onclick="restrictFilenamesCheckbox.clicked()"></div></div>
+							<div class="setting">download quality
+								<div class="setting-dropdown" id="downloadQuality">
+									<div class="setting-dropdown-value" id="setting-dropdown-value-downloadQuality" onclick="downloadQualityDropdown.fieldClicked()"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="update-button" onclick="updateButton.clicked()">update youtube-dl</div>
+				</div>
+				<div class="content-down-drag" id="horizontalDragDown" onmousedown="horizontalDragDown.mouseDown = true">
+					<div class="drag-handle-vertical"></div>
+				</div>
+				<div class="content-down-right">
+					<p>logs :</p>
+					<textarea name="logs" spellcheck='false' autocorrect='off' class="logs-input" id="logs-input"></textarea>
+					<div class="download-button-container">
+						<div class="button-download"><p>stop</p></div>
+						<div class="button-download" onclick="donwloadButton.clicked()"><p>download</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+	<div class="window-bottom">
+		ver 1.3 - WTFPL 2.0 - by MB
+	</div>
+	<script src="./renderer.js"></script>
+</body>
+</html>
+

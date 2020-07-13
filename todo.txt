@@ -1,0 +1,23 @@
+- more parameters!
+	- only time section of video
+- update HUD :
+	- compact
+	- transparent
+	- colorfull
+	- majorbarnul/f
+- popup for output path selection
+- update button for ytdl & ffmpeg
+- fix ffmpeg (move exe outside of __dirname)
+- license
+- build for mac
+- default DL path to download
+- fix minimize/maximize
+?- pause button
+?- renderer.js -> main.js
+
+
+1.0.0
+disconect git inside vs (help me)
+1.1.0
+store config.json in appdata
+log yt-dl outputs into app
